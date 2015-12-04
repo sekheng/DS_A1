@@ -78,7 +78,6 @@
   <ItemGroup>
     <ClCompile Include="Dweller.cpp" />
     <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Outfit.cpp" />
     <ClCompile Include="Vec2D.cpp" />

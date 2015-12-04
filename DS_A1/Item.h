@@ -6,19 +6,19 @@
 class Item : public GameObject
 {
 protected:
-	int durabiliy_;
+	int durability_;
 public:
 	//constructor
-	Item(const string& str, const int& num);
+    Item(const string& str, const int& num) : GameObject(str), durability_(num) {};
 
 	//Destructor
-	~Item();
+    ~Item() {};
 
 	//setter
-	void reduceDurability(const int& num);
+	virtual void reduceDurability(const int& num) = 0;
 
 	//getter
-	int getDurability() const;
+    int getDurability() const { return durability_; };
 };
 
-#endif
+#endif  // ITEM_H

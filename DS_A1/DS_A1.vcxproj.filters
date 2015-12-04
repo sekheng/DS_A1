@@ -24,9 +24,6 @@
     <ClCompile Include="Vec2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Outfit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

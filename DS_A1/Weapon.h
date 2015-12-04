@@ -17,6 +17,9 @@ public:
 
 	// getter
 	int getAttackDmg() const;
+
+
+    virtual void receiveDamage(const int& num);
 };
 
 #endif

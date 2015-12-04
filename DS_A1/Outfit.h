@@ -16,6 +16,7 @@ public:
 
 	//getter
 	int getSPECIAL() const;
+    virtual void receiveDamage(const int& num);
 };
 
 #endif
