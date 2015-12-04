@@ -35,8 +35,8 @@ public:
 	void setPosition(const Vec2D& pos);
 
 	//flags
-	bool receiveHealthDamage(const int& dmg);
-	bool receiveRadDamage(const int& dmg);
+	void receiveHealthDamage(const int& dmg);
+	void receiveRadDamage(const int& dmg);
 	// make sure the equipment's durability decrease
 	void receiveEquipmentDamage(const int& dmg);
 	// store the number of stimpak received

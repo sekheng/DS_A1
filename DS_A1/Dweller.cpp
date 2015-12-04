@@ -11,6 +11,8 @@ Dweller::Dweller(const string& str, const int& special)
 
 Dweller::~Dweller()
 {
+    delete outfit_;
+    delete weapon_;
 }
 
 
@@ -34,7 +36,7 @@ int Dweller::getCurrentRadDamage() const
 
 int Dweller::getAttackDmg() const
 {
-	if (weapon_->getAttackDmg() == NULL)
+	if (weapon_ == NULL)
 	{
 		return 1;
 	}
@@ -58,15 +60,16 @@ void Dweller::setPosition(const Vec2D& pos)
 }
 
 
-bool Dweller::receiveHealthDamage(const int& dmg)
+void Dweller::receiveHealthDamage(const int& dmg)
 {
-	return false;
+    health_ -= dmg;
 }
 
 
-bool Dweller::receiveRadDamage(const int& dmg)
+void Dweller::receiveRadDamage(const int& dmg)
 {
-	return false;
+    radiation_ += dmg;
+    health_ -= dmg;
 }
 
 
