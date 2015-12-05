@@ -15,7 +15,7 @@ public:
     ~Item() {};
 
 	//setter
-	virtual void reduceDurability(const int& num) = 0;
+	virtual void receiveDamage(const int& num) = 0;
 
 	//getter
     int getDurability() const { return durability_; };

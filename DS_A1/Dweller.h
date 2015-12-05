@@ -49,7 +49,7 @@ public:
 	// copy the outfit given to the dweller's outfit
 	Outfit* assignOutfit(Outfit* clothes);
 	// copying the weapon given and assign it to the dweller's weapon
-	Weapon* assignOutift(Weapon* weapon);
+    Weapon* assignWeapon(Weapon* weapon);
 	// check dweller's health
 	bool isDead();
 };
