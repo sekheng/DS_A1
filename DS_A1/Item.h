@@ -12,7 +12,7 @@ public:
     Item(const string& str, const int& num) : GameObject(str), durability_(num) {};
 
 	//Destructor
-    ~Item() {};
+    virtual ~Item() {};
 
 	//setter
 	virtual void receiveDamage(const int& num) = 0;

@@ -12,7 +12,7 @@ public:
 	Outfit(const string& str, const int& dur, const int& special);
 
 	//destructor
-	~Outfit();
+	virtual ~Outfit();
 
 	//getter
 	int getSPECIAL() const;

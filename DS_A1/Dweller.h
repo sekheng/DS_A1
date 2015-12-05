@@ -22,7 +22,7 @@ public:
 	Dweller(const string& str, const int& special);
 
 	//destructor
-	~Dweller();
+	virtual ~Dweller();
 
 	//getters
 	int getSPECIAL() const;

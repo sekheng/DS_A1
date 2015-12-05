@@ -13,7 +13,7 @@ public:
 	Weapon(const string& str, const int& dur, const int& attck);
 
 	//destructor
-	~Weapon();
+	virtual ~Weapon();
 
 	// getter
 	int getAttackDmg() const;

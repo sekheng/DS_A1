@@ -15,7 +15,7 @@ protected:
 	GameObject(const string& str);	//need string
 public:
 	//Destructor
-	~GameObject();
+	virtual ~GameObject();
 
 	//Getter
 	string getName(void);
