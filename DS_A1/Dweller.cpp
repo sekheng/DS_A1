@@ -107,29 +107,40 @@ void Dweller::addRadAway(const int& num)
 //when users want to use radaway, this function is called
 void Dweller::useStimpak()
 {
-    stimpak_ -= 1;
-    for (int num = 0; num < 20; ++num)
+    if (health_ < (100 - radiation_) && isDead() == false)
     {
+        stimpak_ -= 1;
+        health_ += 20;
         if (health_ >= (100 - radiation_))
-            break;
-        ++health_;
-    }
+            health_ = (100 - radiation_);
+        }
 }
 
 
 // This function is called when the user wants to use radaway
 void Dweller::useRadAway()
 {
-    radaway_ -= 1;
-    radiation_ -= 10;
+    if (isDead() == false && radiation_ > 0)
+    {
+        radaway_ -= 1;
+        radiation_ -= 10;
+        if (radiation_ <= 0)
+        {
+            radiation_ = 0;
+        }
+    }
 }
 
 
 // copy the outfit given to the dweller's outfit
 Outfit* Dweller::assignOutfit(Outfit* clothes)
 {
-    delete outfit_;
-    outfit_ = new Outfit(clothes->getName(), clothes->getDurability(), clothes->getSPECIAL());
+    if (isDead() == false)
+    {
+        delete outfit_;
+        outfit_ = new Outfit(clothes->getName(), clothes->getDurability(), clothes->getSPECIAL());
+        return outfit_;
+    }
     return outfit_;
 }
 
