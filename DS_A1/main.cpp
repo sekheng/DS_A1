@@ -17,11 +17,11 @@ void shouldNotCompile();
 
 int main()
 {
-    testNames();
-    shouldNotCompile();
+    //testNames();
+    //shouldNotCompile();
 
     Dweller d("One", 5555555);
-    Outfit o("Outfit", 0, 1234567);
+    Outfit o("Outfit", 1, 1234567);
     cout << d.getSPECIAL() << endl;
     d.assignOutfit(&o);
     cout << d.getSPECIAL() << endl;
