@@ -17,8 +17,8 @@ void shouldNotCompile();
 
 int main()
 {
-    //testNames();
-    //shouldNotCompile();
+    testNames();
+    shouldNotCompile();
 
     Dweller d("One", 5555555);
     Outfit o("Outfit", 1, 1234567);

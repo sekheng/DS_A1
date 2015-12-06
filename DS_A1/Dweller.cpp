@@ -23,7 +23,6 @@ int Dweller::getSPECIAL() const
         int value = 0;
         for (int special = 1000000, remainder = 10; special > 0; special /= 10)
         {
-            //int num = ((SPECIAL_ / special) + (outfit_->getSPECIAL() / special)) % remainder;
             int num = (SPECIAL_ / special) % remainder;
             num += (outfit_->getSPECIAL() / special) % remainder;
             if (num > 9)
