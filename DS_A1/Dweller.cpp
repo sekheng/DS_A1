@@ -18,7 +18,11 @@ Dweller::~Dweller()
 
 int Dweller::getSPECIAL() const
 {
-	return SPECIAL_;
+    if (outfit_->getDurability() > 0 && outfit_ != NULL)
+    {
+
+    }
+        return SPECIAL_;
 }
 
 
