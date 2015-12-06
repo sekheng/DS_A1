@@ -9,16 +9,16 @@ protected:
 	int durability_;
 public:
 	//constructor
-    Item(const string& str, const int& num) : GameObject(str), durability_(num) {};
+    Item(const string& str, const int& num);
 
 	//Destructor
-    virtual ~Item() {};
+    virtual ~Item();
 
 	//setter
 	virtual void receiveDamage(const int& num) = 0;
 
 	//getter
-    int getDurability() const { return durability_; };
+    int getDurability() const;
 };
 
 #endif  // ITEM_H
