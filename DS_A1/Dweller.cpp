@@ -66,27 +66,34 @@ void Dweller::setPosition(const Vec2D& pos)
 
 void Dweller::receiveHealthDamage(const int& dmg)
 {
-    health_ -= dmg;
+    if (isDead() == false)
+        health_ -= dmg;
 }
 
 
 void Dweller::receiveRadDamage(const int& dmg)
 {
-    radiation_ += dmg;
-    health_ -= dmg;
+    if (isDead() == false)
+    {
+        radiation_ += dmg;
+        health_ -= dmg;
+    }
 }
 
 
 // make sure the equipment's durability decrease
 void Dweller::receiveEquipmentDamage(const int& dmg)
 {
-    if (outfit_ != NULL)
+    if (isDead() == false)
     {
-        outfit_->receiveDamage(dmg);
-    }
-    if (weapon_ != NULL)
-    {
-        weapon_->receiveDamage(dmg);
+        if (outfit_ != NULL)
+        {
+            outfit_->receiveDamage(dmg);
+        }
+        if (weapon_ != NULL)
+        {
+            weapon_->receiveDamage(dmg);
+        }
     }
 }
 
@@ -101,7 +108,8 @@ void Dweller::addStimpak(const int& num)
 // store the number of radaway received
 void Dweller::addRadAway(const int& num)
 {
-    radaway_ += num;
+    if (isDead() == false)
+        radaway_ += num;
 }
 
 //when users want to use radaway, this function is called
@@ -148,8 +156,12 @@ Outfit* Dweller::assignOutfit(Outfit* clothes)
 // copying the weapon given and assign it to the dweller's weapon
 Weapon* Dweller::assignWeapon(Weapon* weapon)
 {
-    delete weapon_;
-    weapon_ = new Weapon(weapon->getName(), weapon->getDurability(), weapon->getAttackDmg());
+    if (isDead() == false)
+    {
+        delete weapon_;
+        weapon_ = new Weapon(weapon->getName(), weapon->getDurability(), weapon->getAttackDmg());
+        return weapon_;
+    }
     return weapon_;
 }
 
