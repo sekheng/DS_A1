@@ -57,7 +57,6 @@ int Dweller::getAttackDmg() const
     //{
     //    return 0;
     //}
-    //yolo
 	else
 	{
 		return weapon_->getAttackDmg();
