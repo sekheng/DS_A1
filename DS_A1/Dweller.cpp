@@ -53,10 +53,6 @@ const int Dweller::getAttackDmg()
 	{
 		return 1;
 	}
-    //else if (weapon_->getAttackDmg() < 0)
-    //{
-    //    return 0;
-    //}
 	else
 	{
 		return weapon_->getAttackDmg();
