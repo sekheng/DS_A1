@@ -99,11 +99,11 @@ void Dweller::receiveEquipmentDamage(const int& dmg)
 {
     if (isDead() == false)
     {
-        if (outfit_ != NULL)
+        if (outfit_ != NULL && outfit_->getDurability() > 0)
         {
             outfit_->receiveDamage(dmg);
         }
-        if (weapon_ != NULL)
+        if (weapon_ != NULL && weapon_->getDurability() > 0)
         {
             weapon_->receiveDamage(dmg);
         }
