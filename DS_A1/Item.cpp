@@ -10,7 +10,7 @@ Item::~Item()
 
 }
 
-int Item::getDurability() const
+const int Item::getDurability() 
 {
     return durability_;
 }

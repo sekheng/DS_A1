@@ -16,7 +16,7 @@ Dweller::~Dweller()
 }
 
 
-int Dweller::getSPECIAL() const
+const int Dweller::getSPECIAL()
 {
     if ( outfit_ != NULL && outfit_->getDurability() > 0)
     {
@@ -35,19 +35,19 @@ int Dweller::getSPECIAL() const
 }
 
 
-int Dweller::getCurrentHealth() const
+const int Dweller::getCurrentHealth()
 {
 	return health_;
 }
 
 
-int Dweller::getCurrentRadDamage() const
+const int Dweller::getCurrentRadDamage()
 {
 	return radiation_;
 }
 
 
-int Dweller::getAttackDmg() const
+const int Dweller::getAttackDmg()
 {
 	if (weapon_ == NULL || weapon_->getDurability() < 0)
 	{
@@ -64,7 +64,7 @@ int Dweller::getAttackDmg() const
 }
 
 
-Vec2D Dweller::getPosition() const
+const Vec2D Dweller::getPosition()
 {
 	return position_;
 }

@@ -10,7 +10,7 @@ Outfit::~Outfit()
 
 }
 
-int Outfit::getSPECIAL() const
+const int Outfit::getSPECIAL() 
 {
 	return kSPECIAL;
 }

@@ -12,7 +12,7 @@ Weapon::~Weapon()
 
 
 // getter
-int Weapon::getAttackDmg() const
+const int Weapon::getAttackDmg() 
 {
 	return kAttackDmg;
 }

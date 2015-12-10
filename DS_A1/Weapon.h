@@ -16,7 +16,7 @@ public:
 	virtual ~Weapon();
 
 	// getter
-	int getAttackDmg() const;
+	const int getAttackDmg();
 
 
     virtual void receiveDamage(const int& num);

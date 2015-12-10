@@ -18,7 +18,7 @@ public:
 	virtual void receiveDamage(const int& num) = 0;
 
 	//getter
-    int getDurability() const;
+    const int getDurability();
 };
 
 #endif  // ITEM_H

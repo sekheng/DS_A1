@@ -25,11 +25,11 @@ public:
 	virtual ~Dweller();
 
 	//getters
-	int getSPECIAL() const;
-	int getCurrentHealth() const;
-	int getCurrentRadDamage() const;
-	int getAttackDmg() const;
-	Vec2D getPosition() const;
+	const int getSPECIAL();
+    const int getCurrentHealth();
+    const int getCurrentRadDamage();
+    const int getAttackDmg();
+    const Vec2D getPosition();
 
 	//setters
 	void setPosition(const Vec2D& pos);
