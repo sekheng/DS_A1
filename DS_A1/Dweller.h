@@ -1,10 +1,25 @@
 #ifndef DWELLER_H
 #define DWELLER_H
 
+/******************************************************************************/
+/*!
+\file       Dweller.h
+\author  Lee Sek Heng
+\par        email: 150629Z@mymail.nyp.edu.sg
+\brief
+class to define a Dweller, which inheirited from GameObject class
+*/
+/******************************************************************************/
 #include "Vec2D.h"
 #include "Outfit.h"
 #include "Weapon.h"
 
+/******************************************************************************/
+/*!
+class Dweller:
+\brief  Defines the Dweller, it's variables, Weapon pointer, Outfit pointer, and it's method
+*/
+/******************************************************************************/
 class Dweller :
 	public GameObject
 {
@@ -17,40 +32,29 @@ private:
 	int radaway_;
 	Outfit * outfit_;
 	Weapon * weapon_;
+
 public:
-	//constructor
 	Dweller(const string& str, const int& special);
 
-	//destructor
 	virtual ~Dweller();
 
-	//getters
 	const int getSPECIAL();
     const int getCurrentHealth();
     const int getCurrentRadDamage();
     const int getAttackDmg();
     const Vec2D getPosition();
 
-	//setters
 	void setPosition(const Vec2D& pos);
 
-	//flags
 	void receiveHealthDamage(const int& dmg);
 	void receiveRadDamage(const int& dmg);
-	// make sure the equipment's durability decrease
 	void receiveEquipmentDamage(const int& dmg);
-	// store the number of stimpak received
 	void addStimpak(const int& num);
-	// store the number of radaway received
 	void addRadAway(const int& num);
 	void useStimpak();
-	// This function is called when the user wants to use radaway
 	void useRadAway();
-	// copy the outfit given to the dweller's outfit
 	Outfit* assignOutfit(Outfit* clothes);
-	// copying the weapon given and assign it to the dweller's weapon
     Weapon* assignWeapon(Weapon* weapon);
-	// check dweller's health
 	bool isDead();
 };
 
